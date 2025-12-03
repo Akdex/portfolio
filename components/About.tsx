@@ -36,7 +36,7 @@ export default function About() {
         <section
             id="about"
             ref={sectionRef}
-            className="relative min-h-screen py-20 px-6 md:px-10 bg-white dark:bg-[#0e0e0e] transition-colors duration-300 overflow-hidden"
+            className="relative min-h-screen py-20 px-6 md:px-10 bg-white dark:bg-black transition-colors duration-300 overflow-hidden"
         >
             <div className="max-w-7xl mx-auto w-full">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16">

@@ -53,7 +53,7 @@ export default function Hero() {
             </div>
 
             {/* Aurora Background */}
-            <div className="absolute inset-0 opacity-50 dark:opacity-40 hidden dark:block z-0">
+            <div className="absolute inset-0 opacity-15 dark:opacity-50 dark:block z-0">
                 <Aurora
                     colorStops={["#5227FF", "#7cff67", "#5227FF"]}
                     amplitude={1.2}
