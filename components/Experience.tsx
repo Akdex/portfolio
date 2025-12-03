@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { revealAnimation } from "@/lib/gsapAnimations";
-import SpotlightCard from "./SpotlightCard";
 
 const experiences = [
     {
@@ -59,24 +58,20 @@ export default function Experience() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {experiences.map((exp, i) => (
-                        <SpotlightCard
-                            key={i}
-                            className="exp-card"
-                            spotlightColor="rgba(100, 100, 255, 0.15)"
-                        >
-                            <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100 dark:border-gray-700 h-full">
-                                <div className="flex justify-between items-start mb-4">
-                                    <div>
-                                        <h3 className="text-2xl font-bold mb-1 dark:text-white">{exp.company}</h3>
-                                        <p className="text-lg text-gray-600 dark:text-gray-400">{exp.role}</p>
-                                    </div>
+
+                        <div key={i} className="bg-white dark:bg-black p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100 dark:border-gray-700 h-full">
+                            <div className="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 className="text-2xl font-bold mb-1 dark:text-white">{exp.company}</h3>
+                                    <p className="text-lg text-gray-600 dark:text-gray-400">{exp.role}</p>
                                 </div>
-                                <p className="text-sm text-gray-500 dark:text-gray-500 mb-4 uppercase tracking-wide">
-                                    {exp.period}
-                                </p>
-                                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{exp.description}</p>
                             </div>
-                        </SpotlightCard>
+                            <p className="text-sm text-gray-500 dark:text-gray-500 mb-4 uppercase tracking-wide">
+                                {exp.period}
+                            </p>
+                            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{exp.description}</p>
+                        </div>
+
                     ))}
                 </div>
             </div>

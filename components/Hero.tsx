@@ -132,7 +132,7 @@ export default function Hero() {
             </div>
 
             {/* MetaBalls Scroll Badge */}
-            <div className="absolute bottom-10 right-6 md:right-20 hidden md:block w-40 h-40">
+            <div className="absolute bottom-10 right-6 md:right-25 hidden md:block w-40 h-40">
                 <div className="relative w-full h-full">
                     <MetaBalls
                         className="absolute inset-0"
