@@ -16,19 +16,19 @@ export default function BigCTA() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="relative py-32 px-6 md:px-10 bg-gray-50 overflow-hidden">
+        <section ref={sectionRef} className="relative py-32 px-6 md:px-10 bg-gray-50 dark:bg-[#0e0e0e] transition-colors duration-300 overflow-hidden">
             {/* Watermark */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-bold text-gray-200 opacity-20 pointer-events-none select-none">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-bold text-gray-200 dark:text-gray-800 opacity-20 pointer-events-none select-none">
                 AK
             </div>
 
             <div className="relative z-10 text-center">
-                <h2 className="cta-reveal text-[56px] md:text-[120px] font-bold leading-[0.9] tracking-tighter mb-8">
+                <h2 className="cta-reveal text-[56px] md:text-[120px] font-bold leading-[0.9] tracking-tighter mb-8 dark:text-white">
                     Have a project
                     <br />
                     in mind?
                 </h2>
-                <p className="cta-reveal text-xl md:text-2xl text-gray-500">
+                <p className="cta-reveal text-xl md:text-2xl text-gray-500 dark:text-gray-400">
                     Let's build something amazing together.
                 </p>
             </div>

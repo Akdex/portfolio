@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import SplashCursor from "@/components/SplashCursor";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -20,12 +22,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} antialiased`}
+        className={`${inter.variable} antialiased bg-white dark:bg-black text-black dark:text-white transition-colors duration-300`}
       >
-        <SmoothScroll />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <SmoothScroll />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -41,7 +41,7 @@ export default function Marquee() {
     ];
 
     return (
-        <section className="py-20 bg-black text-white overflow-hidden">
+        <section className="py-20 bg-[#0e0e0e] text-white overflow-hidden">
             <div ref={marqueeRef} className="flex whitespace-nowrap">
                 <div className="marquee-content flex gap-12 px-6">
                     {skills.map((skill, i) => (

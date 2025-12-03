@@ -23,7 +23,7 @@ export default function ContactForm() {
     };
 
     return (
-        <section id="contact" ref={sectionRef} className="py-24 px-6 md:px-10 bg-white">
+        <section id="contact" ref={sectionRef} className="py-24 px-6 md:px-10 bg-white dark:bg-[#0e0e0e] transition-colors duration-300">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
                 {/* Left Info */}
                 <div>
@@ -69,7 +69,7 @@ export default function ContactForm() {
                 </div>
 
                 {/* Right Form */}
-                <div className="contact-reveal bg-gray-50 p-8 md:p-10 rounded-3xl">
+                <div className="contact-reveal bg-gray-50 dark:bg-gray-900 p-8 md:p-10 rounded-3xl">
                     {submitted ? (
                         <div className="h-full flex flex-col justify-center items-center text-center">
                             <div className="text-6xl mb-6">🤝</div>
@@ -118,10 +118,10 @@ export default function ContactForm() {
 
                             <div className="space-y-4">
                                 <label className="text-sm font-bold uppercase tracking-wide text-gray-500">
-                                    Interests
+                                    I'm interested in...
                                 </label>
                                 <div className="flex flex-wrap gap-3">
-                                    {["Web Dev", "Blockchain", "Fintech", "E-commerce", "UI/UX", "Consulting"].map(
+                                    {["Web Development", "App from scratch", "UX/UI Design", "Branding", "Site from scratch", "App Development", "Maintenance", "Consulting"].map(
                                         (interest) => (
                                             <label key={interest} className="cursor-pointer">
                                                 <input type="checkbox" className="peer sr-only" />
@@ -136,7 +136,7 @@ export default function ContactForm() {
 
                             <div className="space-y-4">
                                 <label className="text-sm font-bold uppercase tracking-wide text-gray-500">
-                                    Project Budget
+                                    Project Project budget (USD)
                                 </label>
                                 <div className="flex flex-wrap gap-3">
                                     {["< $5k", "$5k - $10k", "$10k - $20k", "$20k+"].map((budget) => (

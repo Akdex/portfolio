@@ -4,19 +4,32 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 import { revealAnimation } from "@/lib/gsapAnimations";
+import TiltedCard from "./TiltedCard";
 
 const projects = [
+    {
+        title: "SWA",
+        category: "E-commerce / Artisanal Syrups",
+        image: "/assets/portfolio/swa.png",
+        link: "https://drinkswa.com",
+    },
+    {
+        title: "Tesora",
+        category: "E-commerce / Home Appliances",
+        image: "/assets/portfolio/tesora.png",
+        link: "https://shoptesora.com",
+    },
+    {
+        title: "Dexcheck AI",
+        category: "Blockchain / AI Analytics",
+        image: "/assets/portfolio/dexcheck.png",
+        link: "https://dexcheck.ai/app",
+    },
     {
         title: "CryoMEX",
         category: "Blockchain / Gaming",
         image: "https://placehold.co/600x400/1a1a1a/ffffff?text=CryoMEX",
         link: "https://cryomex.io",
-    },
-    {
-        title: "Dexcheck AI",
-        category: "Blockchain / AI",
-        image: "https://placehold.co/600x400/2a2a2a/ffffff?text=Dexcheck+AI",
-        link: "https://dexcheck.ai/app",
     },
     {
         title: "Kotak Mahindra Bank",
@@ -25,16 +38,10 @@ const projects = [
         link: "https://demo.comvision.io/acquirerna/txnSearch.html",
     },
     {
-        title: "Tesora",
+        title: "Electix",
         category: "E-commerce",
-        image: "https://placehold.co/600x400/4a4a4a/ffffff?text=Tesora",
-        link: "https://shoptesora.com",
-    },
-    {
-        title: "SWA",
-        category: "E-commerce",
-        image: "https://placehold.co/600x400/5a5a5a/ffffff?text=SWA",
-        link: "https://drinkswa.com",
+        image: "https://placehold.co/600x400/5a5a5a/ffffff?text=Electix",
+        link: "#",
     },
 ];
 
@@ -63,9 +70,9 @@ export default function Portfolio() {
     }, []);
 
     return (
-        <section id="works" ref={sectionRef} className="py-24 px-6 md:px-10 bg-white">
+        <section id="works" ref={sectionRef} className="py-24 px-6 md:px-10 bg-white dark:bg-[#0e0e0e] transition-colors duration-300">
             <div className="flex justify-between items-end mb-16">
-                <h2 className="portfolio-reveal text-[42px] font-bold leading-tight">
+                <h2 className="portfolio-reveal text-[42px] font-bold leading-tight dark:text-white">
                     Selected Works
                 </h2>
                 <span className="portfolio-reveal hidden md:block text-sm font-medium text-gray-400">
@@ -83,16 +90,37 @@ export default function Portfolio() {
                         onMouseEnter={() => setHoveredIndex(i)}
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
-                        <div className="relative overflow-hidden rounded-lg mb-6 aspect-[4/3]">
-                            <div
-                                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-110"
-                                style={{ backgroundImage: `url(${project.image})` }}
+                        <div className="mb-6">
+                            <TiltedCard
+                                imageSrc={project.image}
+                                altText={project.title}
+                                captionText={project.title}
+                                containerHeight="300px"
+                                containerWidth="100%"
+                                imageHeight="300px"
+                                imageWidth="100%"
+                                rotateAmplitude={12}
+                                scaleOnHover={1.05}
+                                showMobileWarning={false}
+                                showTooltip={false}
+                                displayOverlayContent={true}
+                                // @ts-expect-error
+                                overlayContent={
+                                    <div className="w-[335px] h-[290px] rounded-2xl m-1 flex items-center justify-center bg-black/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center transform scale-0 group-hover:scale-100 transition-transform duration-500 delay-100">
+                                            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                }
                             />
-                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
                         </div>
 
-                        <div className="flex flex-col gap-1 transition-transform duration-300 group-hover:-translate-y-2">
-                            <h3 className="text-2xl font-bold">{project.title}</h3>
+                        <div className="flex flex-col gap-1 transition-transform duration-300 group-hover:-translate-y-2 px-2">
+                            <h3 className="text-2xl font-bold dark:text-white group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">
+                                {project.title}
+                            </h3>
                             <p className="text-sm text-gray-500 uppercase tracking-wider">
                                 {project.category}
                             </p>

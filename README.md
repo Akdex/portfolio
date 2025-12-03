@@ -10,7 +10,7 @@
 
 <br />
 
-**A pixel-perfect, high-performance portfolio website inspired by QClay Design.**  
+**A pixel-perfect, high-performance portfolio website**  
 *Built with modern web technologies for a premium user experience.*
 
 [View Demo](#) · [Report Bug](#) · [Request Feature](#)
