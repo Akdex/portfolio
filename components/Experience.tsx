@@ -59,7 +59,7 @@ export default function Experience() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {experiences.map((exp, i) => (
 
-                        <div key={i} className="bg-white dark:bg-black p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100 dark:border-gray-700 h-full">
+                        <div key={i} className="bg-white dark:bg-[#0e0e0e] p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100 dark:border-gray-700 h-full">
                             <div className="flex justify-between items-start mb-4">
                                 <div>
                                     <h3 className="text-2xl font-bold mb-1 dark:text-white">{exp.company}</h3>

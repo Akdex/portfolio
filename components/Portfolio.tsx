@@ -34,7 +34,7 @@ const projects = [
     {
         title: "Kotak Mahindra Bank",
         category: "Fintech / Analytics",
-        image: "https://placehold.co/600x400/3a3a3a/ffffff?text=Kotak+Bank",
+        image: "/assets/portfolio/kotak.png",
         link: "https://demo.comvision.io/acquirerna/txnSearch.html",
     },
     {
@@ -104,7 +104,7 @@ export default function Portfolio() {
                                 showMobileWarning={false}
                                 showTooltip={false}
                                 displayOverlayContent={true}
-                                // @ts-expect-error
+                                // @ts-expect-error - overlayContent type definition needs update to accept JSX
                                 overlayContent={
                                     <div className="w-[29vw] max-w-[635px] h-[290px] rounded-2xl m-1 flex items-center justify-center bg-black/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                         <div className="w-16 h-16 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center transform scale-0 group-hover:scale-100 transition-transform duration-500 delay-100">

@@ -70,7 +70,7 @@ export default function Header() {
                             href="#contact"
                             className="hidden md:block px-6 py-2 bg-black dark:bg-white text-white dark:text-black rounded-full text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
                         >
-                            Let's Talk
+                            Let's Connect
                         </Link>
                         <button
                             onClick={() => setIsMenuOpen(true)}

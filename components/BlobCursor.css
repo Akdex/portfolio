@@ -1,0 +1,27 @@
+.blob-cursor-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    background: transparent;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(20px);
+    opacity: 0.8;
+    will-change: transform;
+    pointer-events: none;
+}
+
+/* SVG Filter for Gooey Effect */
+.gooey-filter {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}

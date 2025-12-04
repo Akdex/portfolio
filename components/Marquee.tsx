@@ -41,7 +41,7 @@ export default function Marquee() {
     ];
 
     return (
-        <section className="py-20 bg-[#0e0e0e] text-white overflow-hidden">
+        <section className="py-20 bg-[#0e0e0e] dark:bg-white text-white dark:text-black overflow-hidden transition-colors duration-300">
             <div ref={marqueeRef} className="flex whitespace-nowrap">
                 <div className="marquee-content flex gap-12 px-6">
                     {skills.map((skill, i) => (
@@ -49,7 +49,7 @@ export default function Marquee() {
                             <span className="text-[60px] md:text-[100px] font-bold uppercase tracking-tight">
                                 {skill}
                             </span>
-                            <span className="w-4 h-4 bg-white rounded-full" />
+                            <span className="w-4 h-4 bg-white dark:bg-black rounded-full" />
                         </div>
                     ))}
                 </div>
