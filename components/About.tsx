@@ -71,7 +71,7 @@ export default function About() {
 
                     {/* Right Side - Modern Stats Grid */}
                     <div ref={cardsRef} className="relative h-full min-h-[600px] hidden md:block">
-                        <div className="grid grid-cols-2 gap-4 h-full">
+                        <div className="grid grid-cols-2 gap-4 auto-rows-min grid-rows-[auto_auto_auto]">
                             {/* Large Stat Card - Top Left */}
                             <div className="col-span-2 about-reveal bg-gradient-to-br from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 backdrop-blur-sm p-8 rounded-3xl border border-gray-200/50 dark:border-gray-700/50 hover:scale-[1.02] transition-transform duration-300">
                                 <div className="text-6xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
