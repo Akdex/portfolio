@@ -36,7 +36,7 @@ export default function BigCTA() {
             </div> */}
 
             <div className="relative z-10 text-center">
-                <h2 className="cta-reveal text-[56px] md:text-[120px] font-bold leading-[0.9] tracking-tighter mb-8 text-gray-700 dark:text-white/90">
+                <h2 className="cta-reveal text-[56px] select-none md:text-[120px] font-bold leading-[0.9] tracking-tighter mb-8 text-[#0e0e0e] dark:text-white/90">
                     Have a project
                     <br />
                     in mind?
